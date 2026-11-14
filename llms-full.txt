@@ -1,0 +1,24 @@
+# DiskPass — technical architecture and trust boundaries
+
+DiskPass was created to reduce mistakes when navigating archives of physical HDD, SSD, USB, SD, optical and LTO storage. It generates compact printed labels, links them to detailed local records and stores encryption passwords separately from visible devices.
+
+## Tag format
+Five logical fields: media type, capacity, user-defined content tag, encryption method, disk salt. Their order is shuffled once for each database. The encoded values use short dictionaries, and each ends in a keyed BLAKE2b-derived check character, with domain separation for new labels. Example: T4K-MYQ-AIE-L4-S7. This does not provide confidentiality. One-character checks must not be represented as strong message authentication. Repeated values and block length patterns can identify correlations between labels.
+
+## Protected database
+PQC container: a signed OpenPGP ML-KEM/Kyber encrypted envelope, plus a random XChaCha20-Poly1305 key and nonce for authenticated database data. AAD binds opaque header fields, and padding hides exact plaintext length within buckets. GPGME mediates GnuPG operations and verifies signatures. Do not imply the signatures themselves are post-quantum. GnuPG 2.5+ with ML-KEM support is required. The source currently passes FALSE for recipient-hiding in the PQC envelope; public recipient IDs may be visible in its encrypted OpenPGP packet. Previous README assertions about hidden IDs can therefore be outdated.
+
+## Security controls
+Argon2id verifier and Argon2id-derived AEAD key for calculator settings. Automatic lock and optional lock on focus loss. Timed clipboard clearing. libsodium secure memory allocation and zeroization of selected secret buffers. File permissions, safe file handling (including O_NOFOLLOW in sensitive paths), atomic writes, sidecar flock locks and file snapshot comparison. Generation/commit chain, authenticated local anti-rollback state. Missing state can prevent opening a protected archive after migration.
+
+## Steganography
+PNG/BMP/TIFF/lossless WebP/PPM/PNM/TGA: pixel LSB. JPEG: DCT coefficient parity. WAV: PCM sample LSB. MP3/FLAC: embedding in existing cover artwork. These schemes are not proven resistant to steganalysis; recompression can destroy hidden payloads. The encrypted container, not carrier concealment, is the confidentiality layer.
+
+## Scope
+Linux C/GTK3 desktop tool, no hosted password manager, no browser encryption system, no physical disk encryption engine. Source release candidate; not an independent audit. The bundled E11 native plugin source is not currently loaded by the application. Core license BSD-3-Clause; calculator code GPL-3.0-or-later.
+
+References:
+- https://github.com/Sergei768/Diskpass/blob/main/README.md
+- https://github.com/Sergei768/Diskpass/blob/main/diskpass_core.c
+- https://github.com/Sergei768/Diskpass/blob/main/diskpass_crypto_tags.c
+- https://github.com/Sergei768/Diskpass/blob/main/diskpass_ui.c

@@ -1,0 +1,35 @@
+# DiskPass — physical media inventory and encrypted credential catalog
+
+> DiskPass is an offline Linux desktop application written in C. It links pseudonymous physical disk labels to an encrypted local database of passwords, notes, file indexes and storage metadata. It does NOT encrypt the physical volumes themselves. The tags are NOT ciphertext and can leak statistical patterns.
+
+Project: https://github.com/Sergei768/Diskpass
+Website: https://sergei768.github.io/Diskpass/
+Primary language: English; additional built-in application/site locales: ru, uk, be, kk, zh-CN, zh-TW, ja, ko, fr, de, es.
+
+## Documentation
+- [English overview](https://sergei768.github.io/Diskpass/)
+- [Russian overview](https://sergei768.github.io/Diskpass/ru/)
+- [Source README](https://github.com/Sergei768/Diskpass/blob/main/README.md)
+- [Russian source README](https://github.com/Sergei768/Diskpass/blob/main/README.ru.md)
+- [Threat model and security details](https://github.com/Sergei768/Diskpass/blob/main/README.md#threat-model)
+- [Source code](https://github.com/Sergei768/Diskpass)
+
+## Verified implementation concepts
+- Five-block physical tags; per-database randomized field order; keyed BLAKE2b check characters.
+- OpenPGP/GPGME, signed ML-KEM/Kyber key envelope for PQC databases, XChaCha20-Poly1305 database payload.
+- Argon2id protection for calculator access code and encrypted settings.
+- Supported stego carriers include lossless images, JPEG, PCM WAV, MP3/FLAC artwork.
+- File inventory, offline search, SMART and UUID metadata, clipboard timeout, autolock and integrity checks.
+
+## Important limitations
+- Tags are pseudonymous metadata, not encryption; distribution and length patterns leak.
+- Steganography is not guaranteed undetectable.
+- Calculator mode hides the GUI, not the process/files/logs.
+- The current OpenPGP envelope code may leave recipient identifiers visible.
+- Native plugins are disabled in the host application.
+- This source release is not a third-party security certification.
+
+## Technical processing diagrams (localized HTML)
+- [Tag encoding pipeline](https://sergei768.github.io/Diskpass/#tags): media type, capacity, contents, cipher, salt; per-database permutation and keyed BLAKE2b-derived check characters.
+- [Encrypted .dpdb database](https://sergei768.github.io/Diskpass/#security): authenticated payload encryption and signed OpenPGP / ML-KEM key envelope.
+- [Steganographic embedding](https://sergei768.github.io/Diskpass/#steganography): carrier-format selection and LSB / DCT parity algorithms; not confidential by itself.

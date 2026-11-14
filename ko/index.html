@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; script-src 'none'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests" http-equiv="Content-Security-Policy"/>
+<meta content="no-referrer" name="referrer"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<title>DiskPass — 오프라인 디스크 관리, 물리 태그, 암호화된 비밀번호 보관</title>
+<meta content="DiskPass는 HDD·SSD·USB·LTO를 오프라인으로 관리합니다. 5개 블록의 물리 태그와 암호화된 로컬 .dpdb 데이터베이스로 비밀번호와 파일 목록을 정리합니다." name="description"/>
+<meta content="#141414" name="theme-color"/>
+<link href="https://sergei768.github.io/Diskpass/ko/" rel="canonical"/>
+<link href="https://sergei768.github.io/Diskpass/" hreflang="en" rel="alternate"/>
+<link href="https://sergei768.github.io/Diskpass/ru/" hreflang="ru" rel="alternate"/>
+<link href="https://sergei768.github.io/Diskpass/uk/" hreflang="uk" rel="alternate"/>
+<link href="https://sergei768.github.io/Diskpass/be/" hreflang="be" rel="alternate"/>
+<link href="https://sergei768.github.io/Diskpass/kk/" hreflang="kk" rel="alternate"/>
+<link href="https://sergei768.github.io/Diskpass/zh-cn/" hreflang="zh-CN" rel="alternate"/>
+<link href="https://sergei768.github.io/Diskpass/zh-tw/" hreflang="zh-TW" rel="alternate"/>
+<link href="https://sergei768.github.io/Diskpass/ja/" hreflang="ja" rel="alternate"/>
+<link href="https://sergei768.github.io/Diskpass/ko/" hreflang="ko" rel="alternate"/>
+<link href="https://sergei768.github.io/Diskpass/fr/" hreflang="fr" rel="alternate"/>
+<link href="https://sergei768.github.io/Diskpass/de/" hreflang="de" rel="alternate"/>
+<link href="https://sergei768.github.io/Diskpass/es/" hreflang="es" rel="alternate"/>
+<link href="https://sergei768.github.io/Diskpass/" hreflang="x-default" rel="alternate"/>
+<link href="../assets/diskpass-icon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/site.css" rel="stylesheet"/>
+<meta content="website" property="og:type"/>
+<meta content="DiskPass" property="og:site_name"/>
+<meta content="ko" property="og:locale"/>
+<meta content="DiskPass — 오프라인 디스크 관리, 물리 태그, 암호화된 비밀번호 보관" property="og:title"/>
+<meta content="DiskPass는 HDD·SSD·USB·LTO를 오프라인으로 관리합니다. 5개 블록의 물리 태그와 암호화된 로컬 .dpdb 데이터베이스로 비밀번호와 파일 목록을 정리합니다." property="og:description"/>
+<meta content="https://sergei768.github.io/Diskpass/ko/" property="og:url"/>
+<meta content="https://sergei768.github.io/Diskpass/assets/diskpass-physical-drive-manager-preview.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="DiskPass GTK3 화면: 디스크 기록, 물리 태그, UUID 및 파일 색인" property="og:image:alt"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://sergei768.github.io/Diskpass/assets/diskpass-physical-drive-manager-preview.jpg" name="twitter:image"/>
+<meta content="DiskPass GTK3 화면: 디스크 기록, 물리 태그, UUID 및 파일 색인" name="twitter:image:alt"/>
+<meta content="DiskPass — 오프라인 디스크 관리, 물리 태그, 암호화된 비밀번호 보관" name="twitter:title"/>
+<meta content="DiskPass는 HDD·SSD·USB·LTO를 오프라인으로 관리합니다. 5개 블록의 물리 태그와 암호화된 로컬 .dpdb 데이터베이스로 비밀번호와 파일 목록을 정리합니다." name="twitter:description"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://sergei768.github.io/Diskpass/#website","url":"https://sergei768.github.io/Diskpass/","name":"DiskPass","description":"DiskPass — offline inventory and encrypted credential catalog for physical storage media.","inLanguage":["en","ru","uk","be","kk","zh-CN","zh-TW","ja","ko","fr","de","es"]},{"@type":"SoftwareApplication","@id":"https://sergei768.github.io/Diskpass/#software","name":"DiskPass","url":"https://sergei768.github.io/Diskpass/","mainEntityOfPage":{"@id":"https://sergei768.github.io/Diskpass/ko/#webpage"},"description":"DiskPass는 HDD·SSD·USB·LTO를 오프라인으로 관리합니다. 5개 블록의 물리 태그와 암호화된 로컬 .dpdb 데이터베이스로 비밀번호와 파일 목록을 정리합니다.","applicationCategory":"UtilitiesApplication","operatingSystem":"Linux","softwareRequirements":"GTK3, GPGME, libsodium; GnuPG 2.5+ with ML-KEM support for PQC databases","isAccessibleForFree":true,"codeRepository":"https://github.com/Sergei768/Diskpass","screenshot":"https://sergei768.github.io/Diskpass/assets/diskpass-gtk3-drive-manager.webp","image":"https://sergei768.github.io/Diskpass/assets/diskpass-physical-drive-manager-preview.jpg","featureList":["Five-block physical media tags","Offline disk and file inventory","Encrypted .dpdb credential database","Optional calculator interface and steganographic storage"]},{"@type":"WebPage","@id":"https://sergei768.github.io/Diskpass/ko/#webpage","url":"https://sergei768.github.io/Diskpass/ko/","name":"DiskPass — 오프라인 디스크 관리, 물리 태그, 암호화된 비밀번호 보관","description":"DiskPass는 HDD·SSD·USB·LTO를 오프라인으로 관리합니다. 5개 블록의 물리 태그와 암호화된 로컬 .dpdb 데이터베이스로 비밀번호와 파일 목록을 정리합니다.","inLanguage":"ko","isPartOf":{"@id":"https://sergei768.github.io/Diskpass/#website"},"about":{"@id":"https://sergei768.github.io/Diskpass/#software"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://sergei768.github.io/Diskpass/assets/diskpass-physical-drive-manager-preview.jpg"}}]}</script>
+<meta content="telephone=no" name="format-detection"/></head>
+<body>
+<a class="skip" href="#content">본문으로 이동</a>
+<header class="header"><div class="container header-inner">
+<a aria-label="DiskPass" class="brand" href="../"><img alt="" height="32" src="../assets/diskpass-icon.svg" width="32"/><span>DiskPass</span></a>
+<nav aria-label="기본 탐색" class="navlinks"><a href="#tags">태그</a><a href="#security">암호화</a><a href="#steganography">스테가노그래피</a><a href="#downloads">다운로드</a></nav>
+<div class="nav-end"><details class="locale"><summary aria-label="언어">KO</summary><div class="localelist"><a href="../" lang="en">English</a><a href="../ru/" lang="ru">Русский</a><a href="../uk/" lang="uk">Українська</a><a href="../be/" lang="be">Беларуская</a><a href="../kk/" lang="kk">Қазақша</a><a href="../zh-cn/" lang="zh-CN">简体中文</a><a href="../zh-tw/" lang="zh-TW">繁體中文</a><a href="../ja/" lang="ja">日本語</a><a aria-current="page" href="../ko/" lang="ko">한국어</a><a href="../fr/" lang="fr">Français</a><a href="../de/" lang="de">Deutsch</a><a href="../es/" lang="es">Español</a></div></details><a class="github-link" href="https://github.com/Sergei768/Diskpass" rel="noopener noreferrer">GitHub</a></div>
+</div></header>
+<main id="content">
+<section class="hero"><div class="container hero-grid"><div class="hero-copy">
+<h1>물리적 저장 장치의 비공개 목록 관리 시스템</h1><p class="lede">HDD, SSD, USB 및 LTO 보관함을 짧은 물리 태그로 관리하세요. 암호화 비밀번호, 메모, 파일 스냅샷과 매체 정보는 별도로 보호된 로컬 데이터베이스에 저장됩니다.</p>
+<div class="actions"><a class="button primary" href="#downloads">다운로드</a><a class="button secondary" href="https://github.com/Sergei768/Diskpass" rel="noopener noreferrer">저장소 보기</a></div>
+</div><figure class="app-figure"><img alt="DiskPass 앱 화면: 디스크 정보, 물리 태그, UUID, 파일 트리" decoding="async" fetchpriority="high" height="732" src="../assets/diskpass-gtk3-drive-manager.webp" width="1020"/></figure></div></section>
+<section class="section" id="features"><div class="container"><h2>검색 가능한 물리 저장매체 보관함</h2><div class="feature-grid"><article class="feature"><h3>물리 매체 식별</h3><p>5개 필드, 데이터베이스별 순서, 종류 및 용량 사전, 매체별 무작위 솔트.</p></article>
+<article class="feature"><h3>암호화 보관함</h3><p>비밀번호, 암호화 방식, 메모, 태그 매핑을 로컬 .dpdb에 저장.</p></article>
+<article class="feature"><h3>파일 인덱스</h3><p>파일 트리 스냅샷, 디렉터리 탐색 및 오프라인 검색.</p></article>
+<article class="feature"><h3>계산기 모드</h3><p>독립 접근 코드로 보호되는 선택적 계산기 인터페이스.</p></article></div><div class="diagram-wrap" id="tags"><div class="diagram-heading"><h3>물리 태그 생성</h3><p>다섯 속성은 데이터베이스별 블록 순서로 인코딩되며, 각 블록에는 비밀 키 기반 검사 문자가 추가됩니다.</p></div>
+<figure aria-label="물리 태그 생성" class="diagram-graphic tag-diagram"><div aria-label="가로 스크롤 가능한 기술 다이어그램" class="diagram-viewport" role="region" tabindex="0"><img alt="물리 태그 생성 — tags" class="diagram-asset" decoding="async" height="724" loading="lazy" src="../assets/diagrams/02_physical_tag_generation_EN.png" width="2172"/></div></figure><p class="diagram-note">태그는 가명 식별자이지 암호문이 아닙니다. 블록의 통계적 패턴은 남을 수 있습니다.</p></div></div></section>
+<section class="section security" id="security"><div class="container security-grid"><div class="security-summary"><h2>비밀은 인증된 암호화로 보호합니다</h2><p>현대 PQC 데이터베이스는 서명된 ML-KEM/Kyber OpenPGP 키 봉투와 XChaCha20-Poly1305 AEAD 페이로드를 사용합니다.</p><p class="security-caveat">물리적 태그는 암호문이 아닌 식별자입니다. 계산기 인터페이스나 스테가노그래피는 암호화를 대체하지 않습니다.</p></div><div class="security-list"><article class="security-entry"><h3>OpenPGP + ML-KEM</h3><p>GPGME가 키와 서명을 검증합니다. GnuPG 2.5+ 필요, 서명 자체는 양자내성이 아닙니다.</p></article>
+<article class="security-entry"><h3>XChaCha20-Poly1305</h3><p>.dpdb 인증 암호화, AAD 헤더 바인딩, 크기 버킷 패딩.</p></article></div><div class="diagram-wrap cryptography-graph"><div class="diagram-heading"><h3>암호화된 데이터베이스 구조</h3><p>Argon2id/XChaCha20-Poly1305 개념 흐름입니다. 다른 키 보호 모드는 이 그림에 포함되지 않습니다.</p></div>
+<figure aria-label="암호화된 데이터베이스 구조" class="diagram-graphic crypto-diagram"><div aria-label="가로 스크롤 가능한 기술 다이어그램" class="diagram-viewport" role="region" tabindex="0"><img alt="암호화된 데이터베이스 구조 — security" class="diagram-asset" decoding="async" height="724" loading="lazy" src="../assets/diagrams/01_database_encryption_EN.png" width="2172"/></div></figure><p class="diagram-note">OpenPGP 서명은 양자 내성 서명이 아니며 수신자 키 ID가 노출될 수 있습니다.</p></div></div></section>
+<section class="section stego-section" id="steganography"><div class="container"><div class="diagram-heading"><h2>스테가노그래픽 저장</h2><p>이 그림은 캐리어 파일에서 암호화된 데이터베이스를 삽입하고 추출하는 흐름을 보여줍니다.</p></div>
+<figure aria-label="스테가노그래픽 저장" class="diagram-graphic stego-diagram"><div aria-label="가로 스크롤 가능한 기술 다이어그램" class="diagram-viewport" role="region" tabindex="0"><img alt="스테가노그래픽 저장 — steganography" class="diagram-asset" decoding="async" height="724" loading="lazy" src="../assets/diagrams/03_steganography_algorithm_EN.png" width="2172"/></div></figure><p class="diagram-note">스테가노그래피는 암호화를 대체하지 않습니다. LSB/DCT 삽입은 탐지될 수 있고 트랜스코딩으로 payload가 손상될 수 있습니다.</p></div></section><section class="section downloads" id="downloads"><div class="container install-container">
+  <div class="install-top"><h2>DiskPass 다운로드</h2><p>Linux 패키지를 선택하거나 소스 코드에서 빌드하세요.</p></div>
+  <div class="install-headers"><h3 id="package-options">Linux 패키지</h3><span class="install-label">GitHub Releases</span></div>
+  <div class="install-packages"><a class="install-card" target="_blank" rel="noopener noreferrer" href="https://github.com/Sergei768/Diskpass/releases" data-package="deb" aria-label="GitHub Releases"><span class="install-format">DEB</span><span class="install-compat">Debian · Ubuntu</span><span class="install-card-link">GitHub<span aria-hidden="true">↗</span></span></a><a class="install-card" target="_blank" rel="noopener noreferrer" href="https://github.com/Sergei768/Diskpass/releases" data-package="rpm" aria-label="GitHub Releases"><span class="install-format">RPM</span><span class="install-compat">Fedora · RHEL · openSUSE</span><span class="install-card-link">GitHub<span aria-hidden="true">↗</span></span></a><a class="install-card" target="_blank" rel="noopener noreferrer" href="https://github.com/Sergei768/Diskpass/releases" data-package="appimage" aria-label="GitHub Releases"><span class="install-format">AppImage</span><span class="install-compat">Portable Linux</span><span class="install-card-link">GitHub<span aria-hidden="true">↗</span></span></a></div>
+  <p class="install-disclaimer">DEB, RPM, AppImage 빌드가 공개되면 GitHub Releases에서 확인할 수 있습니다.</p>
+  <details class="install-source" id="source-build">
+    <summary><span class="install-source-text"><strong>소스 코드에서 빌드</strong><small>프로젝트 README 및 build.sh 기반 · Debian / Ubuntu</small></span><span class="install-expand">빌드 명령 보기<span class="install-chevron" aria-hidden="true"></span></span></summary>
+    <div class="install-steps">
+      <div class="install-step"><h4><span>01</span>빌드 의존성 설치</h4><pre><code>sudo apt install git build-essential pkg-config \
+  libgtk-3-dev libglib2.0-dev libgpgme-dev \
+  libsodium-dev libcjson-dev libjpeg-dev libwebp-dev \
+  libpango1.0-dev liblzma-dev imagemagick \
+  bluez fonts-dejavu-core</code></pre></div>
+      <div class="install-step"><h4><span>02</span>클론 및 빌드</h4><pre><code>git clone https://github.com/Sergei768/Diskpass.git
+cd Diskpass
+chmod +x ./build.sh
+./build.sh</code></pre></div>
+      <div class="install-step"><h4><span>03</span>DiskPass 실행</h4><pre><code>diskpass</code></pre></div>
+      <p class="install-build-note">build.sh는 sudo 없이 일반 사용자로 실행하세요. GPGME ≥ 1.24.1이 필요하며 PQC에는 ML-KEM을 지원하는 GnuPG 2.5+가 필요합니다. 오래된 배포판에서는 해당 버전을 제공하지 않을 수 있습니다.</p>
+    </div>
+  </details>
+  <div class="install-links"><span>소스 및 릴리스</span><a href="https://github.com/Sergei768/Diskpass/blob/main/README.md" rel="noopener noreferrer">빌드 문서</a><a href="https://github.com/Sergei768/Diskpass/releases" rel="noopener noreferrer">GitHub 릴리스</a></div>
+</div></section>
+</main>
+<footer class="footer"><div class="container footer-inner"><span class="footer-brand">DiskPass</span><nav aria-label="GitHub"><a href="https://github.com/Sergei768/Diskpass" rel="noopener noreferrer">소스 코드</a><a href="https://github.com/Sergei768/Diskpass/blob/main/README.md" rel="noopener noreferrer">README</a><a href="https://github.com/Sergei768/Diskpass/blob/main/LICENSE" rel="noopener noreferrer">LICENSE</a></nav></div></footer>
+</body>
+</html>
